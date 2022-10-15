@@ -10,7 +10,7 @@ int main()
     system("git commit -m %s", commitMessage);
     // Do you wish to push?
     printf(" Do you wish to push?\nY/N\n");
-    scanf("\n%c", &p);
+    scanf("\n%c\n", &p);
     if (p == 'Y' || p == 'y')
     {
         printf("The git repo you wish to push:");
