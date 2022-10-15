@@ -14,7 +14,7 @@ int main()
     if (p == 'Y' || p == 'y')
     {
         printf("The git repo you wish to push:");
-        scanf("\n%[^\n]s", gitrepo);
+        scanf("%[^\n]s", gitrepo);
         system("git remote add origin %s",gitrepo);
         system("git push -u origin master");
     }
