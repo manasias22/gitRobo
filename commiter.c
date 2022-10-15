@@ -7,7 +7,7 @@ int main()
     system("git add .");
     printf("The commit message?\n");
     scanf("%[^\n]s",commitMessage);
-    system("git commit -m %s", commitMessage);
+    system("git commit -m %s",commitMessage);
     // Do you wish to push?
     printf(" Do you wish to push?\nY/N\n");
     scanf("\n%c", &p);
@@ -15,7 +15,7 @@ int main()
     {
         printf("The git repo you wish to push:");
         scanf("\n%[^\n]s", gitrepo);
-        printf("%s",gitrepo);
+        // printf("%s",gitrepo);
         // system("git remote add origin %s",gitrepo);
         // system("git push -u origin master");
     }
