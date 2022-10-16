@@ -10,6 +10,6 @@ repolink = str(input("What link?\n"))
 os.system(f"git remote add origin {repolink}")
 yN = input("want to push?")
 if yN =='Y':
-    os.system("git push origin")
+    os.system("git push -u origin")
 else:
     pass
