@@ -7,9 +7,9 @@ os.system(f"{initializer}")
 os.system(f"{add}")
 os.system(f"{cmt}")
 repolink = str(input("What link?\n"))
-os.system(f"git remote add origin {repolink}")
+os.system(f"git remote add newo {repolink}")
 yN = input("want to push?")
 if yN =='Y':
-    os.system("git push -u origin main")
+    os.system("git push -u newo main")
 else:
     pass
