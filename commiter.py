@@ -16,7 +16,7 @@ repolink = str(input("What link?\n"))
 os.system("git remote add newo {}".format(repolink))
 yN = char(input("want to push?"))
 
-if yN =='Y' or yN ='y':
+if yN =='Y' or yN =='y':
     os.system("git push -u newo main")
 else:
     pass
