@@ -11,10 +11,9 @@ k = 1
 
 while True:
     os.system("git add .")
-    msg = str(input("Commit message?\n"))
+    msg = input("Commit message?\n")
     os.system(f"git commit -m {msg}")
-    if k ==1:
-        yN = input("want to push (Y/N)?")
+    yN = input("want to push (Y/N)?")
     yN.capitalize();
     if yN =='Y':
         if k==1:
