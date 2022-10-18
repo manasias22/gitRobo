@@ -13,4 +13,4 @@ Run the following command:
 ```
 python commiter.py
 ```
-<img src ="commiter.py.svg" alt="Image" />
+<img src ="commiterRobo.py.svg" alt="Image" />
