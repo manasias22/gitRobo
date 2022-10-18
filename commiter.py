@@ -23,7 +23,7 @@ while True:
     yN.capitalize();
     if yN =='Y':
         if k==1:
-            if not gitdirlis:
+            if "origin" not in gitdirlis:
                 repolink = str(input("What link?\n"))
                 os.system("git remote add origin {}".format(repolink)) 
             k=k+1
