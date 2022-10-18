@@ -12,23 +12,24 @@ if ".git" not in dirlis:
     initializer = "git init"
     os.system(f"{initializer}")
 
-gitdirlis = os.listdir(".git\\refs\\remotes")
+gitdirlis = os.listdir(".git\\refs\\remotes\\")
+print(gitdirlis)
 k = 1
 
 while True:
-    os.system("git add .")
     msg = input("Commit message?\n")
+    os.system("git add .")
     os.system(f"git commit -m \"{msg}\"")
     yN = input("want to push (Y/N)?")
     yN.capitalize();
     if yN =='Y':
         if k==1:
-            if "origin" not in gitdirlis:
+            if not gitdirlis:
                 repolink = str(input("What link?\n"))
-                os.system("git remote add origin {}".format(repolink)) 
+                os.system("git remote add newo {}".format(repolink)) 
             k=k+1
         if k == 2:
-            os.system("git push -u origin main")
+            os.system("git push -f newo main")
         else:
             os.system("git push")
         time.sleep(100)
