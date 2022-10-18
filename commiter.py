@@ -12,11 +12,11 @@ cmt = f"git commit -m {msg}"
 os.system(f"{initializer}")
 os.system(f"{add}")
 os.system(f"{cmt}")
-repolink = str(input("What link?\n"))
-os.system("git remote add newo {}".format(repolink))
 yN = input("want to push?")
 
 if yN =='Y' or yN =='y':
-    os.system("git push -u newo main")
+    repolink = str(input("What link?\n"))
+    os.system("git remote add newo {}".format(repolink))
+    os.system("git push -f newo main")
 else:
     pass
