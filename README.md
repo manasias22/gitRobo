@@ -14,6 +14,8 @@ Run the following command:
 python commiter.py
 ```
 <img src ="commiterRobo.py.svg" alt="Image" />
+
+
 ```
 Yea it works!
 ```
