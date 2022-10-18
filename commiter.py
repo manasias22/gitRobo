@@ -7,7 +7,6 @@
 import os
 initializer = "git init"
 os.system(f"{initializer}")
-add ="git add ."
 k = 1
 
 while True:
