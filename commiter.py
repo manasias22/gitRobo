@@ -5,6 +5,7 @@
 # Make changes and then just run this file.
 
 import time
+import glob
 import os
 dirlis = os.listdir()
 
@@ -12,13 +13,17 @@ if ".git" not in dirlis:
     initializer = "git init"
     os.system(f"{initializer}")
 
-gitdirlis = os.listdir(".git\\refs\\remotes\\")
-print(gitdirlis)
 k = 1
-
+gitdirlis = os.listdir(".git\\refs\\remotes\\")
 while True:
     msg = input("Commit message?\n")
-    os.system("git add .")
+    print("What would you like to add?\n 1 -> All file?\n 2 -> Recent modified file?")
+    n = int(input())
+    if n==2:
+        os.system(f"git add \"{max(dirlis, key=os.path.getctime)}\"")
+    else:
+        os.system(f"git add .")
+
     os.system(f"git commit -m \"{msg}\"")
     yN = input("want to push (Y/N)?")
     yN.capitalize();
