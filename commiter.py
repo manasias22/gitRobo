@@ -17,7 +17,7 @@ if ".git" not in dirlis:
 
 
 k = 1
-mk =1
+mk = 1
 gitdirlis = os.listdir(".git\\refs\\")
 #to check if we have newo added in gits directory.
 if mk ==1:
@@ -30,7 +30,6 @@ if mk ==1:
         print("Github link exists.")    
 
 os.system("git branch -m main")
-# gitdirlis = os.listdir("")
 # Infinite loop for infinite commits to git.
 while True:
     msg = input("Commit message?\n")
