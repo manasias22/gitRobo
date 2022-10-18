@@ -20,7 +20,7 @@ k = 1
 
 #to check if we have newo added in gits directory.
 gitdirlis = os.listdir(".git\\refs\\remotes\\") 
-
+os.system("git branch -m main")
 # Infinite loop for infinite commits to git.
 while True:
     msg = input("Commit message?\n")
@@ -46,4 +46,4 @@ while True:
             os.system("git push")
         time.sleep(100)
     else:
-        pass
+        continue
