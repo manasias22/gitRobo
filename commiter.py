@@ -5,8 +5,10 @@
 # Make changes and then just run this file.
 
 import os
-initializer = "git init"
-os.system(f"{initializer}")
+dirlis = os.listdir()
+if ".git" not in dirlis:
+    initializer = "git init"
+    os.system(f"{initializer}")
 k = 1
 
 while True:
