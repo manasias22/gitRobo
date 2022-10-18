@@ -3,7 +3,7 @@
 # you just need to run this code using python 3.10 + interpreter in your directory
 # and input commit message and repo link. And that's it.
 # Make changes and then just run this file.
-
+import timer
 import os
 dirlis = os.listdir()
 if ".git" not in dirlis:
@@ -11,7 +11,7 @@ if ".git" not in dirlis:
     os.system(f"{initializer}")
 k = 1
 
-while True:
+def rec():
     os.system("git add .")
     msg = input("Commit message?\n")
     os.system(f"git commit -m {msg}")
@@ -28,3 +28,6 @@ while True:
             os.system("git push")
     else:
         pass
+
+while True:
+    timer.set_timer(1000,rec())
