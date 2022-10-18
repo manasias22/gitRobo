@@ -7,9 +7,12 @@
 import time
 import os
 dirlis = os.listdir()
+
 if ".git" not in dirlis:
     initializer = "git init"
     os.system(f"{initializer}")
+
+gitdirlis = os.listdir(".git\\refs\\")
 k = 1
 
 while True:
@@ -20,8 +23,9 @@ while True:
     yN.capitalize();
     if yN =='Y':
         if k==1:
-            repolink = str(input("What link?\n"))
-            os.system("git remote add newo {}".format(repolink)) 
+            if not gitdirlis:
+                repolink = str(input("What link?\n"))
+                os.system("git remote add newo {}".format(repolink)) 
             k=k+1
         if k == 2:
             os.system("git push -f newo main")
