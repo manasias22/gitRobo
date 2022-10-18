@@ -12,7 +12,7 @@ if ".git" not in dirlis:
     initializer = "git init"
     os.system(f"{initializer}")
 
-gitdirlis = os.listdir(".git\\refs\\")
+gitdirlis = os.listdir(".git\\refs\\remotes")
 k = 1
 
 while True:
