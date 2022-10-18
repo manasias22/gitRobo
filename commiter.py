@@ -3,7 +3,7 @@
 # you just need to run this code using python 3.10 + interpreter in your directory
 # and input commit message and repo link. And that's it.
 # Make changes and then just run this file.
-import timer
+
 import time
 import os
 dirlis = os.listdir()
@@ -15,7 +15,7 @@ k = 1
 while True:
     os.system("git add .")
     msg = input("Commit message?\n")
-    os.system(f"git commit -m {msg}")
+    os.system(f"git commit -m \"{msg}\"")
     yN = input("want to push (Y/N)?")
     yN.capitalize();
     if yN =='Y':
