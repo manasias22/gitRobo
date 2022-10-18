@@ -14,7 +14,7 @@ os.system(f"{add}")
 os.system(f"{cmt}")
 yN = input("want to push?")
 yN = yN.capitalize();
-if yN =='Y' or yN =='YES':
+if yN =='Y' or yN =="YES":
     repolink = str(input("What link?\n"))
     os.system("git remote add newo {}".format(repolink))
     os.system("git push -f newo main")
