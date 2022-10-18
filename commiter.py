@@ -4,6 +4,7 @@
 # and input commit message and repo link. And that's it.
 # Make changes and then just run this file.
 import timer
+import time
 import os
 dirlis = os.listdir()
 if ".git" not in dirlis:
@@ -11,7 +12,7 @@ if ".git" not in dirlis:
     os.system(f"{initializer}")
 k = 1
 
-def rec():
+while True:
     os.system("git add .")
     msg = input("Commit message?\n")
     os.system(f"git commit -m {msg}")
@@ -26,8 +27,6 @@ def rec():
             os.system("git push -f newo main")
         else:
             os.system("git push")
+        time.sleep(100)
     else:
         pass
-
-while True:
-    timer.set_timer(1000,rec())
