@@ -25,10 +25,10 @@ while True:
         if k==1:
             if not gitdirlis:
                 repolink = str(input("What link?\n"))
-                os.system("git remote add newo {}".format(repolink)) 
+                os.system("git remote add origin {}".format(repolink)) 
             k=k+1
         if k == 2:
-            os.system("git push -f newo main")
+            os.system("git push -u origin main")
         else:
             os.system("git push")
         time.sleep(100)
