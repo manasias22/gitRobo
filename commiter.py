@@ -6,21 +6,24 @@
 
 import os
 initializer = "git init"
+os.system(f"{initializer}")
 add ="git add ."
-msg = str(input("Commit message?\n"))
-cmt = f"git commit -m {msg}"
 k = 1
 while True:
-    os.system(f"{initializer}")
-    os.system(f"{add}")
-    os.system(f"{cmt}")
-    yN = input("want to push (Y/N)?")
+    os.system("git add .")
+    msg = str(input("Commit message?\n"))
+    os.system(f"git commit -m {msg}")
+    if k ==1:
+        yN = input("want to push (Y/N)?")
     yN.capitalize();
     if yN =='Y':
         if k==1:
             repolink = str(input("What link?\n"))
             os.system("git remote add newo {}".format(repolink)) 
             k=k+1
-        os.system("git push -f newo main")
+        if k == 2:
+            os.system("git push -f newo main")
+        else:
+            os.system("git push")
     else:
         pass
