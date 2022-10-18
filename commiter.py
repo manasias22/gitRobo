@@ -9,6 +9,7 @@ initializer = "git init"
 os.system(f"{initializer}")
 add ="git add ."
 k = 1
+
 while True:
     os.system("git add .")
     msg = str(input("Commit message?\n"))
