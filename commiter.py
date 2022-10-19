@@ -33,13 +33,7 @@ os.system("git branch -m main")
 # Infinite loop for infinite commits to git.
 while True:
     msg = input("Commit message?\n")
-    print("What would you like to add?\n 1 -> All files?\n 2 -> Recent modified file?")
-    n = int(input())
-    if n==2:
-        os.system(f"git add \"{max(dirlis, key=os.path.getctime)}\"")
-    else:
-        os.system(f"git add .")
-
+    os.system("git add .")
     os.system(f"git commit -m \"{msg}\"")
     yN =input("want to push (Y/N)?")
     yN.capitalize();
