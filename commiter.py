@@ -15,7 +15,7 @@ if ".git" not in dirlis:
     os.system(f"{initializer}")
 
 
-k = 1
+statusChecker = 1
 mk = 1
 
 gitdirlis = os.listdir(".git\\refs\\")
@@ -36,22 +36,22 @@ os.system("git branch -m main")
 
 while True:
     msg = input("Commit message?\n")
-    # print("What would you like to add?\n 1 -> All files?\n 2 -> Recent modified file?")
-    # n = int(input())
-    # if n==2:
-    #     fileName =str(max(dirlis, key=os.path.getmtime))
-    #     print("modified File is ",fileName)
-    #     os.system(f"\"git add {fileName}\"")
-    # else:
-    os.system(f"git add .")
+    print("What would you like to add?\n 1 -> All files?\n 2 -> Recent modified file?")
+    n = int(input())
+    if n==2:
+        fileName =str(max(dirlis, key=os.path.getmtime))
+        print("modified File is ",fileName)
+        os.system(f"\"git add {fileName}\"")
+    else:
+        os.system(f"git add .")
 
     os.system(f"git commit -m \"{msg}\"")
     yN =input("want to push (Y/N)?")
     yN.capitalize();
     if yN =='Y':
-        if k==1:
+        if statusChecker == 1:
             os.system("git push -f newo main")
-            k += 1
+            statusChecker += 1
         else:
             os.system("git push -u newo")
     else:
