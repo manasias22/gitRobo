@@ -5,7 +5,6 @@
 # Make changes and then just run this file.
 
 import os
-import time
 
 # Make a list of files in your directory
 dirlis = os.listdir()
@@ -32,7 +31,9 @@ if mk ==1:
         print("Github link exists.")    
 
 os.system("git branch -m main")
+
 # Infinite loop for infinite commits to git.
+
 while True:
     msg = input("Commit message?\n")
     print("What would you like to add?\n 1 -> All files?\n 2 -> Recent modified file?")
@@ -53,6 +54,5 @@ while True:
             k += 1
         else:
             os.system("git push -u newo")
-        time.sleep(100)
     else:
         continue
