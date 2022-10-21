@@ -1,3 +1,1 @@
-import os
-
-lis = os.listdir()
+print("Hello World!!")

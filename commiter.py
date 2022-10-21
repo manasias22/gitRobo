@@ -18,7 +18,9 @@ if ".git" not in dirlis:
 
 k = 1
 mk = 1
+
 gitdirlis = os.listdir(".git\\refs\\")
+
 #to check if we have newo added in gits directory.
 if mk ==1:
     if "remotes" not in gitdirlis:
