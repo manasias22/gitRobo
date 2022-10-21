@@ -15,7 +15,7 @@ if ".git" not in dirlis:
     os.system(f"{initializer}")
 
 
-statusChecker = 1
+k = 1
 mk = 1
 
 gitdirlis = os.listdir(".git\\refs\\")
@@ -49,9 +49,9 @@ while True:
     yN =input("want to push (Y/N)?")
     yN.capitalize();
     if yN =='Y':
-        if statusChecker == 1:
+        if k==1:
             os.system("git push -f newo main")
-            statusChecker += 1
+            k += 1
         else:
             os.system("git push -u newo")
     else:
