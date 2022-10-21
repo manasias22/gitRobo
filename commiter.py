@@ -23,7 +23,7 @@ gitdirlis = os.listdir(".git\\refs\\")
 #to check if we have newo added in gits directory.
 if mk ==1:
     if "remotes" not in gitdirlis:
-        repolink = str(input("GIthub link?\n"))
+        repolink = str(input("Github link?\n"))
         if ".git" in repolink:
             os.system("git remote add newo {}".format(repolink)) 
         mk = 2
