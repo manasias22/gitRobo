@@ -47,7 +47,7 @@ while True:
 
     os.system(f"git commit -m \"{msg}\"")
     yN =input("want to push (Y/N)?")
-    yN.capitalize();
+    yN =  yN.capitalize();
     if yN =='Y':
         if k==1:
             os.system("git push -f newo main")
