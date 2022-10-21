@@ -52,7 +52,7 @@ while True:
             os.system("git push -f newo main")
             k += 1
         else:
-            os.system("git push")
+            os.system("git push -u newo")
         time.sleep(100)
     else:
         continue
