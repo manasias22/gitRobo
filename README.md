@@ -15,4 +15,4 @@ python commiter.py
 ```
 
         
-[![Watch the video](.\images\ss.png)](https://clipchamp.com/watch/L2R7H3gN8wj)
+[![Watch the video](images\ss.png)](https://clipchamp.com/watch/L2R7H3gN8wj)
