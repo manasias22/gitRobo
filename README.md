@@ -13,7 +13,7 @@ Run the following command:
 ```
 python commiter.py
 ```
-> Watch the below video
+> Watch the below video (<i>click the image!</i>)
 
 > Its a demo video for all those who wish to contribute
 
