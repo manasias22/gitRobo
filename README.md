@@ -13,6 +13,8 @@ Run the following command:
 ```
 python commiter.py
 ```
+> Watch the below video
 
-        
+> Its a demo video for all those who wish to contribute
+
 [![Watch the video](https://raw.githubusercontent.com/Aditya-Lawate-codez/gitRobo/main/images/ss.png)](https://clipchamp.com/watch/L2R7H3gN8wj)
