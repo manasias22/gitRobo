@@ -1,4 +1,3 @@
-
 # This is a bot to make any directory a git repo.
 # you just need to run this code using python 3.10 + interpreter in your directory
 # and input commit message and repo link. And that's it.
@@ -35,4 +34,4 @@ while True:
     msg = input("Commit message?\n")
     os.system(f"git add .")
     os.system(f"git commit -m \"{msg}\"")
-    os.system("git push -f newo main")
+    os.system("git push")
