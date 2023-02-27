@@ -17,14 +17,15 @@ def Init():
 root = Tk()
  
 # root window title and dimension
-root.title("GitMeUp")
+root.title("GitMeUp",)
 root.geometry("380x400")
 directory = Text(root, height = 10,
 				width = 25,
 				bg = "light yellow")
 # creating button
-btn = Button(root, text="Init", command=lambda: Init()).grid(column=10,row=0)
-btn = Button(root, text="Dir", command=lambda: get_dir()).grid(column=10,row=10)
+btn = Button(root, text="Init", command=lambda: Init()).grid(column=10,row=10)
+btn2 = Button(root, text="", command=lambda: get_dir()).grid(column=10,row=20)
+btn3 = Button(root, text="Dir", command=lambda: get_dir()).grid(column=10,row=20)
 # btn.pack()
  
 # running the main loop
