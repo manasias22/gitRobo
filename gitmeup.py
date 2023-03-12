@@ -88,7 +88,7 @@ edit_menu.add_command(label="Redo")
 edit_menu.add_command(label="Paste")
 
 #add status bar
-status_bar = Label(root,text='Ready        ',anchor=E)
+status_bar = Label(root,text='Ready',anchor=E)
 status_bar.pack(fill=X,side=BOTTOM,ipady=5)
 
 
