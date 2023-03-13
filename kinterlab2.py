@@ -27,7 +27,6 @@ def gitmail():
     sys(f'git config --global user.name \"{mailid}\"')
 # create root window
 root = Tk()
- 
 # root window title and dimension
 root.title("GitMeUp",)
 root.geometry("380x400")
