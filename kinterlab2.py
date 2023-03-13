@@ -19,6 +19,12 @@ def gitpush():
 def getcmtmsg():
     msg = input("Enter a commit msg:")
     sys(f'git commit -m \"{msg}\"')
+def gituser():
+    uname = input("Enter your github username: ")
+    sys(f'git config --global user.name \"{uname}\"')
+def gitmail():
+    mailid = input("Enter mail id associated to your github acc: ")
+    sys(f'git config --global user.name \"{mailid}\"')
 # create root window
 root = Tk()
  
@@ -34,6 +40,8 @@ btn2 = Button(root, text="commit", command=lambda: getcmtmsg()).grid(column=10,r
 btn3 = Button(root, text="Dir", command=lambda: get_dir()).grid(column=10,row=30)
 btn4 = Button(root, text="add", command=lambda: gitadd()).grid(column=10,row=40)
 btn4 = Button(root, text="Push", command=lambda: gitpush()).grid(column=10,row=50)
+btn5 = Button(root, text="Username", command=lambda: gituser()).grid(column=10,row=60)
+btn6 = Button(root, text="mail", command=lambda: gitmail()).grid(column=20,row=60)
 # btn.pack()
  
 # running the main loop
