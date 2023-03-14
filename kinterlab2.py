@@ -37,13 +37,13 @@ directory = Text(root, height = 10,
 				bg = "light yellow")
 # creating button
 btn = Button(root, text="Init", command=lambda: Init()).grid(column=10,row=10)
-btn2 = Button(root, text="commit", command=lambda: getcmtmsg()).grid(column=10,row=20)
-btn3 = Button(root, text="Dir", command=lambda: get_dir()).grid(column=10,row=30)
-btn4 = Button(root, text="add", command=lambda: gitadd()).grid(column=10,row=40)
-btn4 = Button(root, text="Push", command=lambda: gitpush()).grid(column=10,row=50)
+btn2 = Button(root, text="add", command=lambda: gitadd()).grid(column=10,row=20)
+btn3 = Button(root, text="commit", command=lambda: getcmtmsg()).grid(column=10,row=30)
+btn4 = Button(root, text="Push", command=lambda: gitpush()).grid(column=10,row=40)
 btn5 = Button(root, text="Username", command=lambda: gituser()).grid(column=10,row=60)
 btn6 = Button(root, text="mail", command=lambda: gitmail()).grid(column=20,row=60)
-btn7 = Button(root, text="mail", command=lambda: gitmail()).grid(column=15,row=70)
+btn7 = Button(root, text="status", command=lambda: status()).grid(column=15,row=80)
+btnexit = Button(root, text="EXIT", command=lambda: exit()).grid(column=15,row=120)
 # btn.pack()
  
 # running the main loop
