@@ -15,6 +15,12 @@ def gitadd():
     sys('git add .')
 def gitpush():
     sys('git push')
+def gitusname():
+    print('your mail id is: ')
+    sys('git config --global user.mail')
+def gitusmail():
+    print('your username is: ')
+    sys('git config --global user.name')
 def getcmtmsg():
     msg = input("Enter a commit msg:")
     sys(f'git commit -m \"{msg}\"')
@@ -50,8 +56,10 @@ btn = Button(root, text="Init", command=lambda: Init()).grid(column=10,row=30)
 btnadd = Button(root, text="add", command=lambda: gitadd()).grid(column=10,row=40)
 btncommit = Button(root, text="commit", command=lambda: getcmtmsg()).grid(column=10,row=50)
 btnpush = Button(root, text="Push", command=lambda: gitpush()).grid(column=10,row=60)
-btnusrnm = Button(root, text="Username", command=lambda: gituser()).grid(column=10,row=70)
-btnmail = Button(root, text="mail", command=lambda: gitmail()).grid(column=10,row=80)
+btnusrnm = Button(root, text="Modify my Username", command=lambda: gituser()).grid(column=10,row=70)
+btnusrname = Button(root, text="Show me my Mail id", command=lambda: gitusname()).grid(column=20,row=70)
+btnmail = Button(root, text="Modify my mail", command=lambda: gitmail()).grid(column=10,row=80)
+btnusmail = Button(root, text="Show me my user name", command=lambda: gitusmail()).grid(column=20,row=80)
 btnsts = Button(root, text="status", command=lambda: status()).grid(column=10,row=90)
 btnexit = Button(root, text="EXIT", command=lambda: exit()).grid(column=10,row=100)
 # btn.pack()
