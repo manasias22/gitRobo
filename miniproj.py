@@ -1,37 +1,40 @@
 # importing tkinter
-from os import system as sys
+# from os import os.systemtem as os.system
 import os
 from tkinter import *
 # defining function
  
 def get_dir():
     dry= directory.get('1.0',"end-1c")
-    sys(f"cd {dry}")
+    os.system(f"cd {dry}")
 def remote_link():
     pass
 def Init():
-    sys("git init")
+    os.system("git init")
 def gitadd():
-    sys('git add .')
+    os.system('git add .')
 def gitpush():
-    sys('git push')
+    try:
+        os.system('git push -u origin main')
+    except:
+        os.system("git push")
 def gitusname():
     print('your mail id is: ')
-    sys('git config --global user.mail')
+    os.system('git config --global user.mail')
 def gitusmail():
     print('your username is: ')
-    sys('git config --global user.name')
+    os.system('git config --global user.name')
 def getcmtmsg():
     msg = input("Enter a commit msg:")
-    sys(f'git commit -m \"{msg}\"')
+    os.system(f'git commit -m \"{msg}\"')
 def gituser():
     uname = input("Enter your github username: ")
-    sys(f'git config --global user.name \"{uname}\"')
+    os.system(f'git config --global user.name \"{uname}\"')
 def gitmail():
     mailid = input("Enter mail id associated to your github acc: ")
-    sys(f'git config --global user.mail \"{mailid}\"')
+    os.system(f'git config --global user.mail \"{mailid}\"')
 def status():
-    sys(f'git status')
+    os.system(f'git status')
 def chd():
     d = input("Enter the absolute path:")
     try:
@@ -39,6 +42,12 @@ def chd():
     except (FileNotFoundError):
         os.mkdir(d)
         os.chdir(d)
+def gitrmtadd():
+    link = input("Enter git link")
+    if ".git" in link:
+        os.system(f"git remote add origin {link}")
+    else:
+        print("incorrect link")
 
 def directory():
     print(os.getcwd())
@@ -54,6 +63,7 @@ directory = Text(root, height = 10,
 b = Button(root,text="Select Directory",command=lambda: chd()).grid(column=10,row=20)
 btn = Button(root, text="Init", command=lambda: Init()).grid(column=10,row=30)
 btnadd = Button(root, text="add", command=lambda: gitadd()).grid(column=10,row=40)
+btnaddrmt = Button(root, text="add remote repo", command=lambda: gitrmtadd()).grid(column=20,row=40)
 btncommit = Button(root, text="commit", command=lambda: getcmtmsg()).grid(column=10,row=50)
 btnpush = Button(root, text="Push", command=lambda: gitpush()).grid(column=10,row=60)
 btnusrnm = Button(root, text="Modify my Username", command=lambda: gituser()).grid(column=10,row=70)
