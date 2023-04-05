@@ -1,5 +1,5 @@
 from pathlib import Path
-
+import miniproj as mnp
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 
 
@@ -58,7 +58,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_1 clicked"),
+    command= mnp.getcmtmsg,
     relief="flat"
 )
 button_1.place(

@@ -1,3 +1,5 @@
+# importing tkinter
+# from os import os.systemtem as os.system
 import os
 from tkinter import *
 # defining function
@@ -16,16 +18,16 @@ def gitpush():
         os.system('git push -u origin main')
     except:
         os.system("git push")
-def gitusmail():
+def gitusname():
     print('your mail id is: ')
     os.system('git config --global user.mail')
-def gitusname():
+def gitusmail():
     print('your username is: ')
     os.system('git config --global user.name')
 def getcmtmsg():
     msg = input("Enter a commit msg:")
     os.system(f'git commit -m \"{msg}\"')
-def gituser():
+def mgituser():
     uname = input("Enter your github username: ")
     os.system(f'git config --global user.name \"{uname}\"')
 def gitmail():
@@ -65,9 +67,9 @@ btnaddrmt = Button(root, text="add remote repo", command=lambda: gitrmtadd()).gr
 btncommit = Button(root, text="commit", command=lambda: getcmtmsg()).grid(column=10,row=50)
 btnpush = Button(root, text="Push", command=lambda: gitpush()).grid(column=10,row=60)
 btnusrnm = Button(root, text="Modify my Username", command=lambda: gituser()).grid(column=10,row=70)
-btnusrname = Button(root, text="Show me my Mail id", command=lambda: gitusmail()).grid(column=20,row=70)
+btnusrname = Button(root, text="Show me my Mail id", command=lambda: gitusname()).grid(column=20,row=70)
 btnmail = Button(root, text="Modify my mail", command=lambda: gitmail()).grid(column=10,row=80)
-btnusmail = Button(root, text="Show me my user name", command=lambda: gitusname()).grid(column=20,row=80)
+btnusmail = Button(root, text="Show me my user name", command=lambda: gitusmail()).grid(column=20,row=80)
 btnsts = Button(root, text="status", command=lambda: status()).grid(column=10,row=90)
 btnexit = Button(root, text="EXIT", command=lambda: exit()).grid(column=10,row=100)
 # btn.pack()
