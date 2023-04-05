@@ -18,16 +18,16 @@ def gitpush():
         os.system('git push -u origin main')
     except:
         os.system("git push")
-def gitusname():
+def gitusmail():
     print('your mail id is: ')
     os.system('git config --global user.mail')
-def gitusmail():
+def gitusname():
     print('your username is: ')
     os.system('git config --global user.name')
 def getcmtmsg():
     msg = input("Enter a commit msg:")
     os.system(f'git commit -m \"{msg}\"')
-def mgituser():
+def gituser():
     uname = input("Enter your github username: ")
     os.system(f'git config --global user.name \"{uname}\"')
 def gitmail():

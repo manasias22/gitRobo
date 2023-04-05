@@ -74,7 +74,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_2 clicked"),
+    command=mnp.get_dir,
     relief="flat"
 )
 button_2.place(
@@ -90,7 +90,7 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
+    command=mnp.gitpush,
     relief="flat"
 )
 button_3.place(
@@ -106,7 +106,7 @@ button_4 = Button(
     image=button_image_4,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_4 clicked"),
+    command=mnp.status,
     relief="flat"
 )
 button_4.place(
@@ -122,7 +122,7 @@ button_5 = Button(
     image=button_image_5,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
+    command=lambda: mnp.gitadd,
     relief="flat"
 )
 button_5.place(
@@ -138,7 +138,7 @@ button_6 = Button(
     image=button_image_6,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_6 clicked"),
+    command=mnp.gituser,
     relief="flat"
 )
 button_6.place(
@@ -154,7 +154,7 @@ button_7 = Button(
     image=button_image_7,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_7 clicked"),
+    command=mnp.gitrmtadd,
     relief="flat"
 )
 button_7.place(
@@ -170,7 +170,7 @@ button_8 = Button(
     image=button_image_8,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_8 clicked"),
+    command=mnp.gitusmail,
     relief="flat"
 )
 button_8.place(
@@ -186,7 +186,7 @@ button_9 = Button(
     image=button_image_9,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_9 clicked"),
+    command=mnp.gitmail,
     relief="flat"
 )
 button_9.place(
@@ -202,7 +202,7 @@ button_10 = Button(
     image=button_image_10,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_10 clicked"),
+    command=mnp.gitusname,
     relief="flat"
 )
 button_10.place(
