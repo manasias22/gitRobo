@@ -3,10 +3,7 @@
 import os
 from tkinter import *
 # defining function
- 
-def get_dir():
-    dry= directory.get('1.0',"end-1c")
-    os.system(f"cd {dry}")
+
 def remote_link():
     pass
 def Init():
@@ -49,8 +46,6 @@ def gitrmtadd():
     else:
         print("incorrect link")
 
-def directory():
-    print(os.getcwd())
 # create root window
 root = Tk()
 # root window title and dimension
