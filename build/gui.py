@@ -74,7 +74,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=mnp.get_dir,
+    command=mnp.chd,
     relief="flat"
 )
 button_2.place(
@@ -249,7 +249,7 @@ canvas.create_text(
 )
 
 canvas.create_text(
-    369.0,
+    550.0,
     423.0,
     anchor="nw",
     text="shows you the mail id",
@@ -258,7 +258,7 @@ canvas.create_text(
 )
 
 canvas.create_text(
-    369.0,
+    500.0,
     506.0,
     anchor="nw",
     text="Lets you edit your mail id.",
@@ -267,7 +267,7 @@ canvas.create_text(
 )
 
 canvas.create_text(
-    369.0,
+    550.0,
     592.0,
     anchor="nw",
     text="Add remote repo link",
