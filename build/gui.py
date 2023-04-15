@@ -1,10 +1,10 @@
 from pathlib import Path
 import miniproj as mnp
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
+from tkinter import Tk, Canvas, Button, PhotoImage
 
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\Aniket\Downloads\tobeuploaded\build\assets\frame0")
+ASSETS_PATH = OUTPUT_PATH / Path(r".\\assets\\frame0")
 
 
 def relative_to_assets(path: str) -> Path:
@@ -13,9 +13,10 @@ def relative_to_assets(path: str) -> Path:
 
 window = Tk()
 
-window.geometry("1188x825")
+window.geometry("1188x700")
 window.configure(bg = "#4B6893")
 
+window.title("GitMeUp")
 
 canvas = Canvas(
     window,
@@ -122,7 +123,7 @@ button_5 = Button(
     image=button_image_5,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: mnp.gitadd,
+    command=mnp.gitadd,
     relief="flat"
 )
 button_5.place(
