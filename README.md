@@ -17,7 +17,7 @@ python gui.py
 ```
 
 <html>
-<p style="text-align: center;">
+<p style="align: center;">
         
 commit made with :heart: by GitMeUp
 
