@@ -1,0 +1,5 @@
+button_image_7
+
+def get_data():
+    if (entry_1.get()!=""):    
+        mnp.gitrmtadd(entry_1.get())

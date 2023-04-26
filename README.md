@@ -4,9 +4,10 @@ just clone this repo typing
 git clone https://github.com/Aditya-Lawate-codez/gitRobo.git
 ```
 ```bash
-cd gitRobo
+cd build
 ```
 Run the following command:
 ```bash
-python miniproj.py
+python gui.py
 ```
+commit made with :heart: by GitMeUp

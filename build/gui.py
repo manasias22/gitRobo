@@ -10,15 +10,25 @@ ASSETS_PATH = OUTPUT_PATH / Path(r".\\assets\\frame0")
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
 
-
 def get_data():
-    if (entry_1.get()):
+    if (entry_1.get()!=""):    
         mnp.getcmtmsg(entry_1.get())
+
+def get_link():
+    if (entry_1.get()!=""):    
+        mnp.gitrmtadd(entry_1.get())
+def set_mail():
+    if (entry_1.get()!=""):
+        mnp.gitsetmail(entry_1.get())
+def set_uname():
+    if (entry_1.get()!=""):
+        mnp.gitsetuname(entry_1.get())
     
 def dir__lol():
     window.directory = filedialog.askdirectory()
     print (window.directory)
     os.chdir(window.directory)
+    mnp.filechange()
     mnp.chd()
 
 window = Tk()
@@ -170,7 +180,7 @@ button_6 = Button(
     image=button_image_6,
     borderwidth=0,
     highlightthickness=0,
-    command=mnp.gituser,
+    command=set_uname,
     relief="flat"
 )
 button_6.place(
@@ -186,7 +196,7 @@ button_7 = Button(
     image=button_image_7,
     borderwidth=0,
     highlightthickness=0,
-    command=mnp.gitrmtadd,
+    command=get_link,
     relief="flat"
 )
 button_7.place(
@@ -218,7 +228,7 @@ button_9 = Button(
     image=button_image_9,
     borderwidth=0,
     highlightthickness=0,
-    command=mnp.gitmail,
+    command=set_mail,
     relief="flat"
 )
 button_9.place(
@@ -234,7 +244,7 @@ button_10 = Button(
     image=button_image_10,
     borderwidth=0,
     highlightthickness=0,
-    command=mnp.gitusname,
+    command=mnp.gituser,
     relief="flat"
 )
 button_10.place(

@@ -1,5 +1,5 @@
 
-import os
+import os, time
 
 # defining function
 
@@ -16,24 +16,31 @@ def gitpush():
         os.system("git push")
 def gitusmail():
     print('your mail id is: ')
+    time.sleep(1)
     os.system('git config --global user.mail')
-def gitusname():
+def gituser():
     print('your username is: ')
+    time.sleep(1)
     os.system('git config --global user.name')
 def getcmtmsg(msg):
     os.system(f'git commit -m \"{msg}\"')
-def gituser():
-    uname = input("Enter your github username: ")
+def gitsetuname(uname):
     os.system(f'git config --global user.name \"{uname}\"')
-def gitmail():
-    mailid = input("Enter mail id associated to your github acc: ")
+def gitsetmail(mailid):
     os.system(f'git config --global user.mail \"{mailid}\"')
 def status():
     os.system(f'git status')
 def chd():
     os.system("git init")
-def gitrmtadd():
-    link = input("Enter git link")
+def filechange():
+    f = open("Readme.md","+a")
+    t = f.read()
+    msgstr ="\ncommit made with :heart: by GitMeUp"
+    if msgstr in t:
+        pass
+    else:
+        f.write(msgstr)
+def gitrmtadd(link):
     if ".git" in link:
         os.system(f"git remote add origin {link}")
     else:
