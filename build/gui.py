@@ -1,7 +1,7 @@
 from pathlib import Path
 import miniproj as mnp
-from tkinter import Tk, Entry,Canvas, Button, PhotoImage
-
+from tkinter import Tk, Entry,Canvas, Button, PhotoImage, filedialog
+import os
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r".\\assets\\frame0")
@@ -10,6 +10,16 @@ ASSETS_PATH = OUTPUT_PATH / Path(r".\\assets\\frame0")
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
 
+
+def get_data():
+    if (entry_1.get()):
+        mnp.getcmtmsg(entry_1.get())
+    
+def dir__lol():
+    window.directory = filedialog.askdirectory()
+    print (window.directory)
+    os.chdir(window.directory)
+    mnp.chd()
 
 window = Tk()
 
@@ -65,10 +75,8 @@ entry_1 = Entry(
     fg="#000716",
     highlightthickness=0
 )
-def get_data():
-    if (entry_1.get()):
-        mnp.getcmtmsg(entry_1.get())
-    #return y
+
+#lol
 entry_1.place(
     x=617.0,
     y=194.0,
@@ -98,7 +106,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=mnp.chd,
+    command=dir__lol,
     relief="flat"
 )
 button_2.place(

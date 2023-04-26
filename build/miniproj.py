@@ -31,12 +31,6 @@ def gitmail():
 def status():
     os.system(f'git status')
 def chd():
-    d = input("Enter the absolute path:")
-    try:
-        os.chdir(d)
-    except (FileNotFoundError):
-        os.mkdir(d)
-        os.chdir(d)
     os.system("git init")
 def gitrmtadd():
     link = input("Enter git link")
