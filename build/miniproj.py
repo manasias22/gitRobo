@@ -39,7 +39,7 @@ def filechange():
     if msgstr in t:
         pass
     else:
-        f.write(msgstr)
+        f.write("<p align =\"center\">"+msgstr+"</p>")
 def gitrmtadd(link):
     if ".git" in link:
         os.system(f"git remote add origin {link}")
