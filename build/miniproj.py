@@ -20,8 +20,7 @@ def gitusmail():
 def gitusname():
     print('your username is: ')
     os.system('git config --global user.name')
-def getcmtmsg():
-    msg = input("Enter a commit msg:")
+def getcmtmsg(msg):
     os.system(f'git commit -m \"{msg}\"')
 def gituser():
     uname = input("Enter your github username: ")
