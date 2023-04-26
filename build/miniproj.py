@@ -1,7 +1,7 @@
 
-import os, time
+import os
+import time as t
 
-# defining function
 
 def remote_link():
     pass
@@ -16,11 +16,11 @@ def gitpush():
         os.system("git push")
 def gitusmail():
     print('your mail id is: ')
-    time.sleep(1)
+    t.sleep(1)
     os.system('git config --global user.mail')
 def gituser():
     print('your username is: ')
-    time.sleep(1)
+    t.sleep(1)
     os.system('git config --global user.name')
 def getcmtmsg(msg):
     os.system(f'git commit -m \"{msg}\"')
