@@ -1,4 +1,5 @@
-# GitMeUp
+<!doctype html>
+<h1 style="align:center;">GitMeUp</h1>
 
 just clone this repo typing
 
@@ -15,5 +16,7 @@ Run the following command:
 ```bash
 python gui.py
 ```
+
 ---
-<p style="align: center;">commit made with :heart: by GitMeUp</p>
+
+<p align ="center">commit made with :heart: by GitMeUp</p>
