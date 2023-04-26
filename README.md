@@ -16,8 +16,10 @@ Run the following command:
 python gui.py
 ```
 
-<p style="text-align:center">
-
+<html>
+<p style="text-align: center;">
+        
 commit made with :heart: by GitMeUp
 
 </p>
+</html>
