@@ -15,5 +15,5 @@ Run the following command:
 ```bash
 python gui.py
 ```
-
+---
 <p style="align: center;">commit made with :heart: by GitMeUp</p>
