@@ -1,10 +1,10 @@
 from pathlib import Path
 import miniproj as mnp
-from tkinter import Tk, Entry,Canvas, Button, PhotoImage, filedialog
+from tkinter import END, Tk, Entry,Canvas, Button, PhotoImage, filedialog
 import os
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r".\\assets\\frame0")
+ASSETS_PATH = OUTPUT_PATH / Path(r".\\assets")
 
 
 def relative_to_assets(path: str) -> Path:
@@ -13,16 +13,20 @@ def relative_to_assets(path: str) -> Path:
 def get_data():
     if (entry_1.get()!=""):    
         mnp.getcmtmsg(entry_1.get())
-
+    entry_1.delete(0,END)
 def get_link():
     if (entry_1.get()!=""):    
         mnp.gitrmtadd(entry_1.get())
+    entry_1.delete(0,END)
+        
 def set_mail():
     if (entry_1.get()!=""):
         mnp.gitsetmail(entry_1.get())
+    entry_1.delete(0,END)
 def set_uname():
     if (entry_1.get()!=""):
         mnp.gitsetuname(entry_1.get())
+    entry_1.delete(0,END)
     
 def dir__lol():
     window.directory = filedialog.askdirectory()
@@ -90,6 +94,28 @@ entry_1 = Entry(
 entry_1.place(
     x=617.0,
     y=194.0,
+    width=292.0,
+    height=40.0
+)
+
+entry_image_2 = PhotoImage(
+    file=relative_to_assets("entry_1.png"))
+entry_bg_2= canvas.create_image(
+    763.0,
+    215.0,
+    image=entry_image_2
+)
+entry_2 = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+#lol
+entry_2.place(
+    x=194.0,
+    y=600.0,
     width=292.0,
     height=40.0
 )
