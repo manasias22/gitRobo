@@ -13,21 +13,20 @@ def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
 
 def get_data():
+    entry_2.delete(0,END)
+    entry_2.insert(0,"Commit done")
     if (entry_1.get()!=""):    
         mnp.getcmtmsg(entry_1.get())
-    entry_2.insert(0,"Commit done")
     entry_1.delete(0,END)
-    time.sleep(5)
-    entry_2.delete(0,END)
 def get_link():
-    # l=""
+    entry_2.delete(0,END)
     if (entry_1.get()!=""):
         l = mnp.gitrmtadd(entry_1.get())
     entry_2.insert(0,l)
     time.sleep(3)
-    entry_2.delete(0,END)
     entry_1.delete(0,END)    
 def set_mail():
+    entry_2.delete(0,END)
     reg = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
     mail= entry_1.get()
     if (re.fullmatch(reg,mail)):
@@ -36,10 +35,10 @@ def set_mail():
         entry_2.insert("Enter a valid mail id")
     entry_1.delete(0,END)
 def set_uname():
+    entry_2.delete(0,END)
     if (entry_1.get()!=""):
         mnp.gitsetuname(entry_1.get())
     entry_2.insert("Username Updated")
-    entry_2.delete(0,END)
     entry_1.delete(0,END)
 
     
