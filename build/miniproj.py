@@ -1,6 +1,7 @@
 
 import os
 import time as t
+import webbrowser
 
 
 def remote_link():
@@ -30,7 +31,7 @@ def gitsetmail(mailid):
     os.system(f'git config --global user.mail \"{mailid}\"')
 def status():
     os.system(f'git status')
-def chd():
+def initial():
     os.system("git init")
 def filechange():
     f = open("Readme.md","+a")
@@ -40,8 +41,11 @@ def filechange():
         pass
     else:
         f.write("<p align =\"center\">"+msgstr+"</p>")
+def callback(url):
+       webbrowser.open_new_tab(url)
 def gitrmtadd(link):
     if ".git" in link:
         os.system(f"git remote add origin {link}")
+        return "Git link added"
     else:
-        print("incorrect link")
+        return ".git not in link"

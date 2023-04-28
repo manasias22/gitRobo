@@ -1,6 +1,8 @@
 from pathlib import Path
+import re
+import time
 import miniproj as mnp
-from tkinter import END, Tk, Entry,Canvas, Button, PhotoImage, filedialog
+from tkinter import END, Label, Tk, Entry,Canvas, Button, PhotoImage, filedialog
 import os
 
 OUTPUT_PATH = Path(__file__).parent
@@ -13,27 +15,40 @@ def relative_to_assets(path: str) -> Path:
 def get_data():
     if (entry_1.get()!=""):    
         mnp.getcmtmsg(entry_1.get())
+    entry_2.insert(0,"Commit done")
     entry_1.delete(0,END)
+    time.sleep(5)
+    entry_2.delete(0,END)
 def get_link():
-    if (entry_1.get()!=""):    
-        mnp.gitrmtadd(entry_1.get())
-    entry_1.delete(0,END)
-        
-def set_mail():
+    # l=""
     if (entry_1.get()!=""):
-        mnp.gitsetmail(entry_1.get())
+        l = mnp.gitrmtadd(entry_1.get())
+    entry_2.insert(0,l)
+    time.sleep(3)
+    entry_2.delete(0,END)
+    entry_1.delete(0,END)    
+def set_mail():
+    reg = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+    mail= entry_1.get()
+    if (re.fullmatch(reg,mail)):
+        mnp.gitsetmail(mail)
+    else:
+        entry_2.insert("Enter a valid mail id")
     entry_1.delete(0,END)
 def set_uname():
     if (entry_1.get()!=""):
         mnp.gitsetuname(entry_1.get())
+    entry_2.insert("Username Updated")
+    entry_2.delete(0,END)
     entry_1.delete(0,END)
+
     
-def dir__lol():
+def dirSelect():
     window.directory = filedialog.askdirectory()
-    print (window.directory)
     os.chdir(window.directory)
+    entry_2.insert(0,"Directory: " + str(window.directory))
     mnp.filechange()
-    mnp.chd()
+    mnp.initial()
 
 window = Tk()
 
@@ -87,10 +102,11 @@ entry_1 = Entry(
     bd=0,
     bg="#D9D9D9",
     fg="#000716",
-    highlightthickness=0
+    highlightthickness=0,
+    font=("Ariel",16)
 )
 
-#lol
+
 entry_1.place(
     x=617.0,
     y=194.0,
@@ -109,16 +125,21 @@ entry_2 = Entry(
     bd=0,
     bg="#D9D9D9",
     fg="#000716",
-    highlightthickness=0
+    highlightthickness=0,
+    font=("Ariel",16)
 )
 
-#lol
+
 entry_2.place(
     x=194.0,
     y=600.0,
     width=292.0,
     height=40.0
 )
+
+link = Label(window, text="Download Git Scm from this link",font=('Helveticabold', 15), fg="blue",bg="#000000", cursor="hand2")
+link.bind("<Button-1>",lambda e: mnp.callback("https://git-scm.com/download/"))
+link.pack()
 
 button_image_1 = PhotoImage(
     file=relative_to_assets("button_1.png"))
@@ -142,7 +163,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=dir__lol,
+    command=dirSelect,
     relief="flat"
 )
 button_2.place(
