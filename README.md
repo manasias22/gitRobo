@@ -19,6 +19,7 @@ python gui.py
 
 ---
 
-<p align ="center">commit made with :heart: by GitMeUp</p>
 <p align ="center">
-commit made with :heart: by GitMeUp</p>
+commit made with :heart: by 
+<a href="https://github.com/Aditya-Lawate-codez/gitRobo">GitMeUp</a>
+</p>

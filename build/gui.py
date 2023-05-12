@@ -33,21 +33,31 @@ def set_mail():
         mnp.gitsetmail(mail)
     else:
         entry_2.insert("Enter a valid mail id")
+    entry_2.insert(0,"New Mail:\n "+ mail)
     entry_1.delete(0,END)
 def set_uname():
     entry_2.delete(0,END)
     if (entry_1.get()!=""):
         mnp.gitsetuname(entry_1.get())
-    entry_2.insert("Username Updated")
+    entry_2.insert(0,"New Uname: "+entry_1.get())
     entry_1.delete(0,END)
-
-    
 def dirSelect():
     window.directory = filedialog.askdirectory()
     os.chdir(window.directory)
     entry_2.insert(0,"Directory: " + str(window.directory))
     mnp.filechange()
     mnp.initial()
+def set_e2(txt):
+    entry_2.delete(0,END)
+    entry_2.insert(0,txt)
+def uname():
+    un=mnp.gituser()
+    print(un)
+    print(type(un))
+    set_e2(un)
+def eemail():
+    un=mnp.gitusmail()
+    set_e2(un)
 
 window = Tk()
 
@@ -125,15 +135,15 @@ entry_2 = Entry(
     bg="#D9D9D9",
     fg="#000716",
     highlightthickness=0,
-    font=("Ariel",16)
+    font=("Ariel",16),
 )
 
 
 entry_2.place(
-    x=194.0,
+    x=50.0,
     y=600.0,
-    width=292.0,
-    height=40.0
+    width=400.0,
+    height=60.0
 )
 
 link = Label(window, text="Download Git Scm from this link",font=('Helveticabold', 15), fg="blue",bg="#000000", cursor="hand2")
@@ -258,7 +268,7 @@ button_8 = Button(
     image=button_image_8,
     borderwidth=0,
     highlightthickness=0,
-    command=mnp.gitusmail,
+    command=eemail,
     relief="flat"
 )
 button_8.place(
@@ -290,7 +300,7 @@ button_10 = Button(
     image=button_image_10,
     borderwidth=0,
     highlightthickness=0,
-    command=mnp.gituser,
+    command=uname,
     relief="flat"
 )
 button_10.place(
@@ -371,5 +381,5 @@ image_4 = canvas.create_image(
     image=image_image_4
 )
 
-window.resizable(False, False)
+# window.resizable(False, False)
 window.mainloop()
