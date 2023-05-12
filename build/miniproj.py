@@ -39,7 +39,7 @@ def filechange():
     if gmu in t:
         pass
     else:
-        f.write("<p align =\"center\">Commit made with :heart: by <a href=\"<a href=\"https://github.com/Aditya-Lawate-codez/gitRobo\">GitMeUp</a>\"</p>")
+        f.write("<p align =\"center\">Commit made with :heart: by <a href=\"https://github.com/Aditya-Lawate-codez/gitRobo\">GitMeUp</a>\"</p>")
 def callback(url):
        webbrowser.open_new_tab(url)
 def gitrmtadd(link):
