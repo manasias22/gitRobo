@@ -1,3 +1,5 @@
+# GitmeUp : Git Github Automation Tool
+
 <!doctype html>
 <h1 style="align:center;">GitMeUp</h1>
 
@@ -16,6 +18,9 @@ Run the following command:
 ```bash
 python gui.py
 ```
+
+# Project Explanation :-
+https://drive.google.com/file/d/1l1UNw1wsLU_kfU8wYu6cyDbKBRI4gOjh/view?usp=drivesdk
 
 ---
 
